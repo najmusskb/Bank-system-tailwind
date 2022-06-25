@@ -16,7 +16,7 @@ document.getElementById('login-submit').addEventListener('click', function () {
 
 
 
-    if (userEmail == 'www.najmussakib597@gmail.com' && userPassword == 'sakib123' {
+    if (userEmail == 'www.najmussakib597@gmail.com' && userPassword == 'sakib123') {
 
         window.location.href = 'banking.html'
 
