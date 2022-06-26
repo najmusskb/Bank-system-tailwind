@@ -36,3 +36,40 @@ document.getElementById('deposit-button').addEventListener('click', function () 
 
 
 })
+
+// handle withdrow
+
+document.getElementById('withdraw-button').addEventListener('click', function () {
+
+
+    const withdrowinput = document.getElementById('withdraw-input');
+    const withdrowAmountText = withdrowinput.value;
+    const newWithdrowAmount = parseFloat(withdrowAmountText);
+    console.log(newWithdrowAmount);
+
+
+
+    // set withdrow total
+
+
+    const WithdrawTotal = document.getElementById('withdraw-Total');
+    const PreviousWithdrawText = WithdrawTotal.innerText;
+    const PreviousWithdrawtotal = parseFloat(PreviousWithdrawText);
+
+    const newWithdrawTotal = PreviousWithdrawtotal + newWithdrowAmount;
+
+    WithdrawTotal.innerText = newWithdrawTotal;
+
+
+    // update balance
+
+    const balanceTotal = document.getElementById('balance-total');
+
+    const previousBalanceTotaltext = balanceTotal.innerText;
+    const previousBalanceTotal = parseFloat(previousBalanceTotaltext);
+    const newBalanceTotal = previousBalanceTotal - newWithdrowAmount;
+    balanceTotal.innerText = newBalanceTotal;
+    withdrowinput.value = '';
+
+
+})
